@@ -38,7 +38,7 @@
 							<p>Exclusively crafted with passion</br>
 								[Site currently under renovation]</p>
 						</header>
-						<span class="image"><img src="images/pic011.jpg" alt="" /></span>
+						<span class="image"><img src="" alt="" /></span>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
@@ -52,7 +52,7 @@
 								<div class="col-4 col-12-medium">
 									<header>
 										<h2>I'm Ikzath Mohamed Kalanthar from Berlin</h2>
-										<p>A full-stack web & software developer and daydreamer!</p>
+										<p>An amateur Full-Stack developer and daydreamer!</p>
 									</header>
 								</div>
 								<div class="col-4 col-12-medium">
@@ -151,17 +151,46 @@
 							<h2>Contact</h2>
 							<p>ikzathjob@hotmail.com <br> +4915214715246 </p>
 						</header>
-						<form method="post" action="message" class="cta" onsubmit="alert('Your message has been submitted')">
+						<!-- <form method="post" action="/email" class="cta"> -->
+						<form class='cta' id='contactForm' >	
 							<div class="row gtr-uniform gtr-50">
-								<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Enter your email..." required/></div>
-								<div class="col-8 col-12-large"><input type="text" name="message" placeholder="Enter your message..." required/></div>
+								<div class="col-8 col-12-xsmall"><input type="email" id='email' name="email" placeholder="Enter your email..." required/></div>
+								<div class="col-8 col-12-large"><input type="text" id='subject' name="subject" placeholder="Enter your message..." required/></div>
+								<div class="col-8 col-12-large"><input type="text" id='text' name="text" placeholder="Enter your message..." required/></div>
+
 								<div class="col-4 col-12-xsmall"><input type="submit" value="Send Message" class="fit primary" /></div>
 							</div>
 						</form>
+						<div class="alert">Your message has been sent</div>
 					</div>
-				</section>
 
-			<!-- Footer -->
+				<!-- </section>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+				<script src="assets/js/jquery.min.js"></script>
+
+				<script>
+					$('form').on('submit', (e)=> {
+					e.preventDefault();
+
+					const email = $('#email').val().trim();
+					const subject = $('#subject').val().trim();
+					const text = $('#text').val().trim();
+
+					
+					const data = {
+						email,
+						subject,
+					    text
+					};
+					
+					$.post('/email', data, function(){
+                    console.log('server received the details');
+					});
+					
+					});
+				</script> -->
+
+			
 				<footer id="footer">
 					<ul class="icons">
 						<li><a href="#" title="no link available" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
@@ -187,6 +216,10 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+			<script src="main.js"></script>
+
 
 	</body>
 </html>
