@@ -34,11 +34,11 @@ function submitForm(e) {
     saveMessage(email, subject, text);
 
     // show message sent alert
-    document.querySelector('.alert').style.display = 'block';
+    document.querySelector('.alert').style.display = 'none';
     
     // hide alert after 3 seconds
     setTimeout(() => {
-      document.querySelector('.alert').style.display = 'none';
+      document.querySelector('.alert').style.display = 'block';
 
     }, 3000);
 
