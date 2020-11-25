@@ -34,7 +34,7 @@ function submitForm(e) {
     saveMessage(email, subject, text);
 
     // show message sent alert
-    document.getElemenyByClassName('.alert').style.display = 'block';
+    document.querySelector('.alert').style.display = 'block';
     
     // hide alert after 3 seconds
     setTimeout(() => {
