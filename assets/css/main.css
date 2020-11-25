@@ -115,6 +115,15 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
+
+		.alert {
+			text-align: center;
+			padding: 10px;
+			background: #39c088;
+			color: #ffffff;
+			margin-bottom: 10px;
+			display: none; }
+
 		a:hover {
 			color: #e44c65 !important;
 			border-bottom-color: transparent;
